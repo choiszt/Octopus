@@ -153,99 +153,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large Vision-Language Models (LVLMs) can understand the world comprehensively by integrating rich 
-            information from different modalities, achieving remarkable performance improvements on various 
-            multimodal downstream tasks. However, deploying LVLMs is often problematic due to their massive 
-            computational/energy costs and carbon consumption. Such issues make it infeasible to adopt conventional 
-            iterative global pruning, which is costly due to computing the Hessian matrix of the entire large model 
-            for sparsification. Alternatively, several studies have recently proposed layer-wise pruning approaches 
-            to avoid the expensive computation of global pruning and efficiently compress model weights according to 
-            their importance within a layer. However, these methods often suffer from suboptimal model compression 
-            due to their lack of a global perspective. To address this limitation in recent efficient pruning methods 
-            for large models, we propose Efficient Coarse-to-Fine Layer-Wise Pruning (ECoFLaP), a two-stage 
-            coarse-to-fine weight pruning approach for LVLMs. We first determine the sparsity ratios of different 
-            layers or blocks by leveraging the global importance score, which is efficiently computed based on the 
-            zeroth-order approximation of the global model gradients. Then, the multimodal model performs local 
-            layer-wise unstructured weight pruning based on globally-informed sparsity ratios. We validate our 
-            proposed method across various multimodal and unimodal models and datasets, demonstrating significant 
-            performance improvements over prevalent pruning techniques in the high-sparsity regime.
+            The fusion of vision and language in recent vision-language models (VLMs) represents a significant advancement in multimodal comprehension and interpretation. Furthermore, when seamlessly integrated into an embodied agent, it signifies a crucial stride towards the creation of autonomous and context-aware systems capable of formulating plans and executing commands with precision. In this paper, we introduce \textbf{Octopus}, a novel VLM designed to proficiently decipher an agent's vision and textual task objectives and to formulate intricate action sequences and generate executable code. Our design allows the agent to adeptly handle a wide spectrum of tasks, ranging from mundane daily chores in simulators to sophisticated interactions in complex video games. Octopus is trained by leveraging GPT-4 to control an explorative agent to generate training data, i.e., action blueprints and the corresponding executable code, within our experimental environment called OctoVerse. We also collect the feedback that allows the extra training scheme of \textbf{Reinforcement Learning with Environmental Feedback~(RLEF)}. Through a series of experiments, we illuminate Octopus's functionality and present compelling results, and the proposed RLEF turns out to refine the agent’s decision-making. By open-sourcing our model architecture, simulator, and dataset, we aspire to ignite further innovation and foster collaborative applications within the broader embodied AI community. The codebase is released at 
+            <a href="https://github.com/dongyh20/Octopus">https://github.com/dongyh20/Octopus</a>.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section> -->
-<!-- End image carousel -->
-
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section> -->
-
 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
