@@ -7,6 +7,11 @@
       font-family: 'Noto Sans', sans-serif;
       line-height: 1.6;
     }
+    .carousel .item img {
+    max-width: 100%; /* 使图片宽度与容器一致，但不超过其原始大小 */
+    height: auto;    /* 保持原始宽高比 */
+    max-height: 300px;  /* 可以调整此值以达到期望的高度 */
+}
 
     .title,
     .subtitle {
