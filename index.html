@@ -154,29 +154,7 @@
       </div>
     </div>
   </section>
-<script>
-  let currentSlide = 0; // 当前显示的轮播项
-const slides = document.querySelectorAll('.carousel .item'); // 获取所有的轮播项
-const totalSlides = slides.length;
-
-// 显示当前轮播项
-function showSlide() {
-    slides.forEach(slide => slide.style.display = 'none'); // 隐藏所有轮播项
-    slides[currentSlide].style.display = 'block'; // 显示当前轮播项
-}
-
-// 更新轮播项
-function updateSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides; // 循环到第一个轮播项
-    showSlide();
-}
-
-// 设置自动轮播的间隔
-setInterval(updateSlide, 5000); // 每5秒自动轮播到下一个图片
-
-// 初始显示第一个轮播项
-showSlide();
-
+<script src="./carousel.js">
 </script>
   <!-- colomn deomstration -->
   <section class="hero is-light is-small">
