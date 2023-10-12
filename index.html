@@ -61,7 +61,7 @@
   <meta name="description" content="Octopus">
   <meta property="og:title" content="Octopus (2023)" />
   <meta property="og:description"
-    content="Octopus: Learning Embodied Vision-Language Programming from Environmental Feedback" />
+    content="Octopus: Embodied Vision-Language \\ Programmer from Environmental Feedback" />
   <meta property="og:url" content="Choiszt.github.io" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/Octopus.png" />
@@ -71,7 +71,7 @@
 
   <meta name="twitter:title" content="ECoFLaP (2023)">
   <meta name="twitter:description"
-    content="ECoFLaP: An Efficient Coarse-to-Fine Model Pruning Approach with Zeroth-Order Gradient">
+    content="Octopus: Embodied Vision-Language \\ Programmer from Environmental Feedback">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/unc.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -80,7 +80,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Octopus: Learning Embodied Vision-Language Programming from Environmental Feedback</title>
+  <title>Octopus: Embodied Vision-Language \\ Programmer from Environmental Feedback</title>
   <link rel="icon" type="image/x-icon" href="static/images/octopus.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -106,8 +106,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <img src="static/images/octopus.png" style="width: 450px; height: auto;">
-            <h1 class="title is-1 publication-title">Learning Embodied Vision-Language Programming from Environmental
-              Feedback</h1>
+            <h1 class="title is-1 publication-title">Octopus: Embodied Vision-Language \\ Programmer from Environmental Feedback</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <p class="author-block">
@@ -298,8 +297,8 @@
                       </h2>
 
                         <h2 class="subtitle has-text-left">
-                          <b>The provided image depicts a comprehensive pipeline for data collection and
-                            training.</b>
+                          The provided image depicts a comprehensive pipeline for data collection and
+                            training.
                           In the <b>Data Collection Pipeline</b>, environmental
                           information is captured, parsed into a scene graph, and combined to generate
                           <b>environment
@@ -327,31 +326,64 @@
     </div>
   </section>
   <!-- End youtube video -->
-
   <!-- Youtube video -->
-  <section class="hero is-small is-light">
+  <section class="hero is-small is-light" style="background-color: white; font-size: 16px;">
     <div class="hero-body">
       <div class="container">
         <!-- Paper video. -->
         <h2 class="title is-3">Results</h2>
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <script src="./carousel.js">
-            </script>
-            <!-- colomn deomstration -->
-            <section class="hero is-light is-small">
+            <script src="./carousel.js"></script>
+            <!-- column demonstration -->
+            <section class="hero is-light is-small" style="background-color: white">
               <div class="hero-body">
                 <div class="container">
                   <div id="results-carousel" class="carousel results-carousel">
-                    <!-- 第一个轮播项 -->
                     <div class="item item-steve">
-                      <img src="static/images/results.jpg" alt="Description of Image 1">
+                      <img src="static/images/resized_teaser.jpg" alt="Description of Image 1">
+                        <h2 class="subtitle centered-text" style="color: goldenrod;">
+                          <br>
+                          <strong>Collection Example for "Cook a Bacon" Task.</strong>
+                        </h2>
+                        <h2 class="subtitle has-text-left" style="margin-top: 0;">
+                          GPT-4 perceives the environment through the <b>environmental message</b> and
+                          produces anticipated plans and code in accordance with the detailed <b>system
+                            message</b>. This code is subsequently executed in the simulator, directing the agent
+                          to the subsequent state. For each state, we gather the environmental message, wherein
+                          <b>observed objects</b> and <b>relations</b> are substituted by egocentric
+                          images to serve as the training input. The response from GPT-4 acts as the training output.
+                          Environmental feedback, specifically the determination of whether each target state is met, is
+                          documented for RLEF training.
+                        </h2>
                     </div>
-                    <!-- 第二个轮播项 -->
                     <div class="item item-chair-tp">
-                      <img src="static/images/Qualitative Results.jpg" alt="Description of Image 2">
-                    </div>
+                      <img src="static/images/resized_pipeline.jpg" alt="Description of Image 2">
+                      <h2 class="subtitle centered-text" style="color: goldenrod;">
+                        <br>
+                        <strong>Data Collection and Training Pipeline</strong>
+                      </h2>
 
+                        <h2 class="subtitle has-text-left">
+                          The provided image depicts a comprehensive pipeline for data collection and
+                            training.
+                          In the <b>Data Collection Pipeline</b>, environmental
+                          information is captured, parsed into a scene graph, and combined to generate
+                          <b>environment
+                            message</b> and <b>system message</b>. These messages subsequently drive
+                          agent
+                          control, culminating in executable code. For the <b>Octopus Training Pipeline</b>,
+                          the
+                          agent's vision and code are input to the Octopus model for training using both
+                          <b>SFT</b> and <b>RLEF</b> techniques. The accompanying text emphasizes
+                          the
+                          importance of a well-structured system message for GPT-4's effective code generation and notes
+                          the challenges faced due to errors, underscoring the adaptability of the model in handling a
+                          myriad of tasks. In essence, the pipeline offers a holistic approach to agent training, from
+                          environment understanding to action execution.
+                        </h2>
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -361,25 +393,7 @@
       </div>
     </div>
   </section>
-  <!-- End youtube video -->
 
-
-
-
-
-  <!-- Paper poster -->
-  <!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-  <!--End paper poster -->
 
 
   <!--BibTex citation -->
@@ -389,7 +403,7 @@
       <pre><code>
         @inproceedings{Sung2023ECoFLaP,
           author = {Yi-Lin Sung, Jaehong Yoon, Mohit Bansal},
-          title = {Octopus: Learning Embodied Vision-Language Programming from Environmental Feedback},
+          title = {Octopus: Octopus: Embodied Vision-Language \\ Programmer from Environmental Feedback},
           booktitle = {arXiv:2310.02998},
           year = {2023},
         }
