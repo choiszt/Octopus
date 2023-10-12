@@ -7,12 +7,6 @@
       font-family: 'Noto Sans', sans-serif;
       line-height: 1.6;
     }
-    .carousel .item img {
-    max-width: 100%; /* 使图片宽度与容器一致，但不超过其原始大小 */
-    height: 900px;    /* 保持原始宽高比 */
-    max-height: 900px;  /* 可以调整此值以达到期望的高度 */
-}
-
     .title,
     .subtitle {
       font-family: 'Google Sans', sans-serif;
@@ -231,7 +225,7 @@
   <!-- End teaser video -->
 
   <!-- Paper abstract -->
-  <section class="section hero is-light" style="font-size: 18px;">
+  <section class="section hero is-light" style="font-size: 14px;">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -262,6 +256,88 @@
       </div>
     </div>
   </section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container">
+          <div id="results-carousel1" class="carousel results-carousel1">
+              <div class="item">
+                  <!-- Your image here -->
+                  <h2 class="title is-3" style="text-align: center;">Overview of FunQA.</h2>
+                  <img src="static/images/fig_main.png" alt="MY ALT TEXT" />
+                  <h2 class="subtitle">
+                      <br>FunQA comprises three subsets of surprising videos: 1) HumorQA, 2) CreativeQA, and 3) MagicQA. Each subset is associated with three common tasks: <em>1) counter-intuitive timestamp localization}, </em><em>2) detailed video description}, and 3) reasoning around counter-intuitiveness</em>                            } (see
+                      <b>H1-3</b>,
+                      <b>C1-3</b>, and
+                      <b>M1-3</b>). Furthermore, we offer higher-level tasks tailored for each video type, such as <em>attributing a fitting and vivid title</em> for HumorQA and CreativeQA (see
+                      <b>H4</b>,
+                      <b>H4</b>), etc.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <h2 class="title is-3" style="text-align: center;">Dataset statistics</h2>
+                  <img src="static/images/statics.png" alt="MY ALT TEXT" />
+                  <h2 class="subtitle">
+                      <br>FunQA consists of three subsets, each corresponding to different video types, and is annotated with free-text QA pairs. The first row displays word clouds representing critical annotations for each subset. The second row
+                      provides key dataset statistics, including the number of videos for different splits, video length, and QA pair count for three subsets. In the last row, (g) highlights the high-frequency time span of the answer for localization
+                      questions in red, (h) shows the average word count of answers, and (i) presents the percentage of consensus between annotators for the same answer in a sampled set.
+                  </h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container">
+          <div id="results-carousel1" class="carousel results-carousel1">
+              <div class="item">
+                  <!-- Your image here -->
+                  <h2 class="title is-3" style="text-align: center;">Comparison between different benchmarks</h2>
+                  <h2 class="subtitle">
+                      <br>Compare to other datasets, FunQA revolves around the captivating realm of interesting and counter-intuitive videos. The tasks within FunQA are specifically designed to challenge the vision capabilities of models, requiring
+                      strong skills in producing an in-depth description, interpretation, and spatial-temporal reasoning. Here we clarify the abbreviation in the table. <b>Anno.</b>: Annotation; <b>M</b>: Manual, <b>A</b>: Automatic; For Input,
+                      <b>V, A, S</b>, and <b>B</b> denote Video, Audio, Subtitle, and Bounding-box; <b>VC</b> means visual-centric, <b>Desc.</b> means Description, <b>Expl</b> for Explanation, <b>Expl</b> for Spatial-temporal Reasoning. For QA Tasks,
+                      <b>MC</b> denotes Multiple Choice QA, <b>OE</b> means Open Ended QA, and <b>FT</b> means Free Text QA.
+                  </h2>
+                  <img src="static/images/table1.png" alt="MY ALT TEXT" />
+
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <h2 class="title is-3" style="text-align: center;">Main result for baselines</h2>
+                  <h2 class="subtitle">
+                      <br>The FunQA benchmark consists of four task categories. H1, C1, M1 represent the counter-intuitive timestamp localization task, where IOU is used as the metric. H2, C2, M2 represent the detailed video description task, and
+                      H3, C3, M3 represent reasoning around counter-intuitiveness. For the higher-level tasks, H4, C4 involve attributing a fitting and vivid title. The responses for all these tasks in free-text format. We use the following metrics:
+                      BLEU-4 / ROUGE-L / CIDEr (shown in the first row) and BLEURT / GPT-4 (shown in the second row) for evaluation. C5 represents scoring the video creativity, and the metric is the Difference between the predicted score and the
+                      official score. We tested the caption-based and instruction-based models. Here we clarify the abbreviation in the table. L.M.: GIT_LARGE_MSRVTT; L.V.: GIT_LARGE_VATEX; D.C. means finetuned on Dense Caption; FunQA means
+                      finetuned on FunQA.
+                  </h2>
+                  <img src="static/images/table.png" alt="MY ALT TEXT" />
+
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <h2 class="title is-3" style="text-align: center;">Comparison of responses from different models</h2>
+                  <h2 class="subtitle">
+                      <br>Here shows the answers given by VideoChat, Video-ChatGPT, and Otter on HumorQA video. On task H2, H3, VideoChat has the best performance. On task H4, Video-ChatGPT and Otter answer better, which is in line with our experiment
+                      result. However, the answers from all models are still far from the ground truth. The descriptions of details and counter-intuitive explanations have numerous shortcomings. For example, Video-ChatGPT added incorrect details
+                      to the description, such as "wearing sunglasses", the humorous reason for "throwing ketchup" was wrongly interpreted by VideoChat as "knocking over the ketchup bottle", etc.
+                  </h2>
+                  <img src="static/images/model_comparison.png" alt="MY ALT TEXT" />
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
   <!-- Youtube video -->
   <section class="hero is-small is-light">
