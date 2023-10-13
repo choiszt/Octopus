@@ -1,44 +1,87 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+<p align="center" width="100%">
+<img src="https://i.mji.rip/2023/10/13/c4bdc6505f2b3f2304bffb5ea196f5a2.png"  width="40%" height="80%">
+</p>
+<div>
+<div align="center">
+<font size=5><strong>Octopus: Embodied Vision-Language Programmer from Environmental Feedback</strong></font>
+<br>
+    <a href='https://jingkang50.github.io/' target='_blank'>Jingkang Yang<sup>*,1</sup></a>&emsp;
+    <a href='https://github.com/dongyh20/' target='_blank'>Yuhao Dong<sup>*,2,5</sup></a>&emsp;
+    <a href='https://github.com/choiszt/' target='_blank'>Shuai Liu<sup>*,3,5</sup></a>&emsp;
+    <a href='https://brianboli.com/' target='_blank'>Bo Li<sup>*,1</sup></a>&emsp;
+    </br>
+    Ziyue Wang<sup>&dagger;,1</sup></a>&emsp;
+	Chencheng Jiang<sup>&dagger;,4</sup></a>&emsp;
+    Haoran Tan<sup>&dagger;,3</sup></a>&emsp;
+    Jiamu Kang<sup>&dagger;,2</sup></a>&emsp;
+	</br>
+    <a href='https://zhangyuanhan-ai.github.io/' target='_blank'>Yuanhan Zhang<sup>1</sup></a>&emsp;
+	<a href='https://kaiyangzhou.github.io/' target='_blank'>Kaiyang Zhou<sup>1</sup></a>&emsp;
+	<a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu<sup>1,5,&#x2709</sup></a>
+</div>
+<div align="center">
+    <sup>1</sup>S-Lab, Nanyang Technological University&emsp;
+    <sup>2</sup>Tsinghua University&emsp;
+    <br>
+    <sup>3</sup>Beijing University of Posts and Telecommunications&emsp;&emsp;
+    <br>
+    <sup>4</sup>Xi'an Jiaotong University&emsp;
+    <sup>5</sup>Shanghai AI Laboratory&emsp;
+    </br>
+    <sup>*</sup> Equal Contribution&emsp;
+    <sup>&dagger;</sup> Equal Engineering Contribution&emsp;
+    <sup>&#x2709</sup> Corresponding Author
+</div>
 
 
-Example project pages built using this template are:
-- https://www.vision.huji.ac.il/deepsim/
-- https://www.vision.huji.ac.il/3d_ads/
-- https://www.vision.huji.ac.il/ssrl_ad/
-- https://www.vision.huji.ac.il/conffusion/
+-----------------
+
+![](https://img.shields.io/badge/octopus-v0.1-darkcyan)
+![](https://img.shields.io/github/stars/dongyh20/Octopus?style=social)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdongyh20%2FOctopus&count_bg=%23FFA500&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
+![](https://black.readthedocs.io/en/stable/_static/license.svg)
+![](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+[Project Page](https://choiszt.github.io/Octopus) | [Octopus Paper](https://arxiv.org/)
+
+## 🐙 Introducing Octopus
+Octopus is a novel VLM designed to proficiently decipher an agent’s vision and textual task objectives and to formulate intricate action sequences and generate executable code.
+
+This repository provides:
+- Training data collection pipeline in `octogibson` environment,
+- Evaluation pipeline in `octogibson` environment,
+- Evaluation pipeline in `octogta` environment,
+- Training pipeline of the `octopus` model.
+
+**Contact: Leave issue or contact `jingkang001@e.ntu.edu.sg` and `dongyh20@mails.tsinghua.edu.cn`. We are on call to respond.**
+
+## 🦾 Updates
+
+**[2023-10]**
+
+1. 🤗 Introducing Project Octopus' homepage: https://choiszt.github.io/Octopus.
+2. 🤗 Check our [paper](https://arxiv.org/abs/???) introducing Octopus in details. 
 
 
-## Start using the template
-To start using the template click on `Use this Template`.
+## 🏁 Get Started
+1. **Training Data Collection:** For data collection from `octogibson` environment, you need to set up two conda environments: `omnigibson` and `gpt4`. The `omnigibson` environment has an agent to act following the instruction from `gpt4` environment. Please checkout [here](octogibson/README.md) for detailed information.
+2. **Evaluation in OctoGibson:** We provide the pipeline that the simulator sends messages to the Octopus server and gets responses to control the agent.
+3. **Evaluation in OctoGTA:** We provide instructions, code, and MOD so that the Octopus can complete tasks in the GTA environment. Please checkout [here](octogta/README.md) for detailed information.
+4. **Octopus Training:** We provide code for training Octopus. Please checkout [here](octopus/README.md) for detailed information.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+## 📑 Citation
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+If you found this repository useful, please consider citing:
+```
+@article{yang2023octopus,
+    author = {Jingkang Yang and Yuhao Dong and Shuai Liu and Bo Li and Ziyue Wang and Chencheng Jiang and Haoran Tan and Jiamu Kang and Yuanhan Zhang and Kaiyang Zhou and Ziwei Liu},
+    title = {Octopus: Embodied Vision-Language Programmer from Environmental Feedback},
+    year = {2023},
+    license = {\url{http://arxiv.org/licenses/nonexclusive-distrib/1.0/}}
+}
+```
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+### 👨‍🏫 Acknowledgements
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
-
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+We thank the [OmniGibson](https://github.com/StanfordVL/OmniGibson) team for their help and great contribution to the open-source community.
